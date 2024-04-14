@@ -55,18 +55,19 @@
             <button onclick="createMarker()">Create Marker</button>
         </div>
 
-        <iframe id="map" src="https://app.cartes.io/maps/15f25c40-14f0-47e1-b39b-05d59df0af08"
+        <!-- <iframe id="map" src="https://app.cartes.io/maps/15f25c40-14f0-47e1-b39b-05d59df0af08"
             width="100%"
             height="400"
-            frameborder="0"></iframe>
+            frameborder="0"></iframe> -->
     
         <script>
             const header1 = new Headers();
             header1.append("Content-Type", "application/json");
             header1.append("Accept", "application/json");
-            header1.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTc3ZmI4NDY1MGEzYzgzNzg4M2NiMjg1MWIzY2JmZjUwZWE4MWM5M2VkMmMxZTFmYjQ4NGU1ODk1NGQzMzRmMTdmZDJlYzNkMjFkMjkzNjAiLCJpYXQiOjE3MTI3OTcwMjQuOTkyNjIxLCJuYmYiOjE3MTI3OTcwMjQuOTkyNjI1LCJleHAiOjE3NDQzMzMwMjQuODAyMjA1LCJzdWIiOiIxODkiLCJzY29wZXMiOltdfQ.WhNYpG7KzXqiPDqIZC1DkiI1nApzqjelgdw849imzs1gp3eOiOCQJbSAZQLb7LG-pyWEIiw_5ZKV_B6PnALXSWxTTA81fh-4g0Xu91Vw6SLJzcZFgDBoPY4qTEG2hs7ktO2_ePzCIjK1zNeL-YbQ9ManAXVi8bE5uzROMRkjQkh0omaW00Tg-muup3H-Fk2BBWkmKbxHM2-E2FTfs3v1ndUwlT0XmCGDZGmR7qI2PYhd6HKcLrrUFDQCUIaYyyaMKh87tmqU9Pf_21bJ-7tahcYuWZh8lzU8FfenXLQWkAwAhT77jL6VjjCDRzddDBwi7nYGAB5huYEEAfXOZ9m5O4j47wVkcoBiuoz16WXDq8S7zQaEzopEA7gthRukjNGc_2CE5mzjGPn45T8T2NLqsdSJAq3Hvr7gD4ag9OEilmwsbnEUpnjjJTPgKB6ppkf6mUjPUy1q_9LHBlqgzoJB9PUqhhoQyB8_NHNUAoPhOGoxxf6vfE24dobg1-RZ8oO1FBCD_JzKALZUyFXiGERny4BYWdgx0ZLwZApJ2XH_Ht7bDar_H6s_1LAoLtMk6gP5Yg82AkqJ2SSQfgkO3_7a4fbLHgoiDEXdLguYNTnHPcs8M0DzBa3zOaaDz3msy-RMml35gKSQn2_AjEJPiwOACHaR0iLvc1QUQhc9NZEJ08M");
+            header1.append("Authorization", "Bearer " + process.env.API_KEY1);
             let mapUuid = "";
-            const geocodeApi = "&api_key=661af2396d933641699870vzf08db1e";
+            const geocodeApi = "&api_key=" + process.env.API_KEY2;
+
 
             function createMap(){
                 const mapName =  document.getElementById("mapName").value;
