@@ -55,10 +55,10 @@
             <button onclick="createMarker()">Create Marker</button>
         </div>
 
-        <!-- <iframe id="map" src="https://app.cartes.io/maps/15f25c40-14f0-47e1-b39b-05d59df0af08"
+        <iframe id="map" src="https://app.cartes.io/maps/15f25c40-14f0-47e1-b39b-05d59df0af08"
             width="100%"
             height="400"
-            frameborder="0"></iframe> -->
+            frameborder="0"></iframe>
     
         <script>
             const header1 = new Headers();
@@ -67,7 +67,6 @@
             header1.append("Authorization", "Bearer " + process.env.API_KEY1);
             let mapUuid = "";
             const geocodeApi = "&api_key=" + process.env.API_KEY2;
-
 
             function createMap(){
                 const mapName =  document.getElementById("mapName").value;
